@@ -1,0 +1,11 @@
+button{
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    font-size: x-large;
+    cursor: pointer;
+    &:hover{
+        color: grey;
+        transition: 0.5s;
+    }
+}

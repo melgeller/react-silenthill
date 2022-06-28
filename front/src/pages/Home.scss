@@ -1,0 +1,16 @@
+.menu{
+    a {
+        color:white;
+    }
+    a:hover span {
+        display:none;
+    }
+    a:hover:before {
+        color:white;
+        content:'"';
+    }
+    a:hover:after {
+        color:white;
+        content:'"';
+    }
+}

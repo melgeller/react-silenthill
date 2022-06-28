@@ -1,0 +1,73 @@
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+    margin-top: 50px;
+    color: whitesmoke;
+    margin-bottom: 137px;
+    label{
+        margin: 10px;
+    }
+    input{
+        width: 200px;
+        border-radius: 10px;
+        border: 1.5px solid grey;
+        font-family: 'Palatino Linotype';
+        font-size: large;
+        text-align: center;
+    }
+    button{
+        margin: 20px;
+        width: 100px;
+        border-radius: 10px;
+        border: 2px solid black;
+    }
+    select{
+        width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        text-align: center;
+        option{
+            font-size: large;
+         
+        }
+    }
+}
+
+.registerForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+    margin-top: 10px;
+    margin-bottom: 31px;
+    color: whitesmoke;
+    label{
+        margin: 10px;
+    }
+    input{
+        width: 200px;
+        border-radius: 10px;
+        border: 1.5px solid grey;
+        font-family: 'Palatino Linotype';
+        font-size: large;
+        text-align: center;
+    }
+    button{
+        margin: 16.5px;
+        width: 100px;
+        border-radius: 10px;
+        border: 2px solid black;
+    }
+    select{
+        width: 200px;
+        height: 40px;
+        border-radius: 10px;
+        text-align: center;
+        option{
+            font-size: large;
+         
+        }
+    }
+}
