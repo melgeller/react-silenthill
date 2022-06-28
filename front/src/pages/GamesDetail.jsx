@@ -6,23 +6,34 @@ import "./GamesDetail.scss";
 const GamesDetail = () => {
   const { id } = useParams();
   const [game, setGame] = useState({});
+  const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
     const getGameByTitle = async () => {
       const res = await axios.get(
         `https://node-silent-hill.vercel.app/games/id/${id}`
       );
-      setGame(res.data);
+      setGame(res.data)
+      setTimeout(() => {
+        setLoaded(true)
+      }, 2000)
     };
 
     getGameByTitle();
   });
-  return (
-    <div className='details'>
+  return <div className='details'>
       {game ? (
         <>
-          {game.poster !== undefined ? (
-            <img className='poster' src={game.poster} alt={game.title}></img>
+        {loaded ? (
+          <>
+        <img className='poster' src={game.poster} alt={game.title}></img>
+        <div className='cardDetail'>
+        <p className='titleDetail'>{game.title}</p>
+        <p className='mediumDetail'>{game.year}</p>
+        <p className='mediumDetail'>{game.platform}</p>
+        <p className='smallDetail'>{game.about}</p>
+        </div>
+        </>
           ) : (
             <div className="harry">
             <img
@@ -30,16 +41,13 @@ const GamesDetail = () => {
               alt='loading'></img>
               </div>
           )}
-          <div className='cardDetail'>
-            <p className='titleDetail'>{game.title}</p>
-            <p className='mediumDetail'>{game.year}</p>
-            <p className='mediumDetail'>{game.platform}</p>
-            <p className='smallDetail'>{game.about}</p>
-          </div>
-        </>
-      ) : null}
+        
+
+        </> ) : null
+        
+      }
+      
     </div>
-  );
 };
 
 export default GamesDetail;
